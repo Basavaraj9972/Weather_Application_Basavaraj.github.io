@@ -35,27 +35,29 @@ h1 {
 .search-container {
     position: relative;
     display: inline-block;
+    width: 100%;
+    max-width: 600px;
 }
 
 .city-input {
-    width: calc(100% - 40px);
-    padding: 10px 35px 10px 10px;
-    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px 40px 10px 10px;
     border: 2px solid #007bff;
     border-radius: 5px;
     font-size: 16px;
     font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
 }
 
 .search-btn {
     position: absolute;
     top: 50%;
-    right: 5px;
+    right: 10px;
     transform: translateY(-50%);
     border: none;
     background: none;
     cursor: pointer;
-    padding: 0 10px;
+    padding: 0;
 }
 
 .search-btn i {
@@ -63,7 +65,7 @@ h1 {
     font-size: 18px;
 }
 
-.search-btn:hover {
+.search-btn:hover i {
     color: #0056b3;
 }
 
@@ -85,9 +87,6 @@ h1 {
 /* Current Weather Section */
 .current-weather {
     margin-top: 10px;
-    margin-left: 80px;
-    margin-right: 70px;
-    padding-left: 80px;
     border-top: 2px solid #40ff00;
     display: flex;
     flex-wrap: wrap;
@@ -227,8 +226,7 @@ h1 {
     }
 
     .search-container {
-        display: block;
-        text-align: center;
+        width: 100%;
     }
 
     .city-input {
@@ -236,14 +234,14 @@ h1 {
     }
 
     .search-btn {
-        position: relative;
-        top: 0;
-        right: 0;
-        transform: none;
-        margin-top: 10px;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .location-btn {
+        width: 100%;
         margin-top: 10px;
     }
 
