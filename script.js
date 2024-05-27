@@ -49,7 +49,7 @@ const createHourlyForecastItem = (forecastItem) => {
     let date = new Date(forecastItem.dt * 1000);
     return `<div class="forecast-item">
         <h3><i class="fas fa-clock"></i> ${date.getHours()}:00</h3>
-        <img src="http://openweathermap.org/img/wn/${forecastItem.weather[0].icon}@2x.png" alt="Weather Icon">
+        <img src="http://openweathermap.org/img/wn/${forecastItem.weather[0].icon}.png" alt="Weather Icon">
         <p><i class="fas fa-thermometer-half"></i> Temp: ${Math.round(forecastItem.main.temp)}°C</p>
         <p><i class="fas fa-cloud-rain"></i> Precipitation: ${(forecastItem.pop * 100).toFixed(0)}%</p>
         <p><i class="fas fa-cloud"></i> ${forecastItem.weather[0].description}</p>
@@ -95,8 +95,6 @@ const getHourlyForecast = (cityName) => {
             }, 3000);
         });
 };
-
-
 
 const getWeatherDetails = (cityName) => {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&units=metric`)
@@ -163,7 +161,7 @@ locationButton.addEventListener("click", () => {
             const { latitude, longitude } = position.coords;
             fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`)
                 .then(res => {
-                    if (!res.ok) throw new Error("Unable to retrieve weather data");
+                    if (!res.ok) throw new Error("Unable to fetch weather data");
                     return res.json();
                 })
                 .then(data => {
@@ -172,7 +170,7 @@ locationButton.addEventListener("click", () => {
                 })
                 .catch(err => {
                     console.error(err);
-                    errorMessageDiv.textContent = "Unable to retrieve weather data. Please try again.";
+                    errorMessageDiv.textContent = "Unable to fetch weather data. Please try again.";
                     errorMessageDiv.style.display = "block";
                     setTimeout(() => {
                         errorMessageDiv.style.display = "none";
@@ -180,6 +178,13 @@ locationButton.addEventListener("click", () => {
                 });
         });
     } else {
-        alert("Geolocation is not supported by this browser.");
+        errorMessageDiv.textContent = "Geolocation is not supported by this browser.";
+        errorMessageDiv.style.display = "block";
+        setTimeout(() => {
+            errorMessageDiv.style.display = "none";
+        }, 3000);
     }
 });
+
+// Get weather details for a default city when the page loads
+getWeatherDetails("London");
