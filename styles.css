@@ -218,3 +218,51 @@ h1 {
     border-radius: 5px;
     background-color: #ffcccc;
 }
+
+/* Media Queries for Responsive Design */
+@media only screen and (max-width: 600px) {
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .search-container {
+        display: block;
+        text-align: center;
+    }
+
+    .city-input {
+        width: 100%;
+    }
+
+    .search-btn {
+        position: relative;
+        top: 0;
+        right: 0;
+        transform: none;
+        margin-top: 10px;
+    }
+
+    .location-btn {
+        margin-top: 10px;
+    }
+
+    .current-weather {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-left: 10px;
+    }
+
+    .weather-cards {
+        justify-content: center;
+    }
+
+    .card {
+        width: calc(50% - 20px);
+    }
+
+    .forecast-item {
+        margin: 5px;
+        padding: 10px;
+    }
+}
