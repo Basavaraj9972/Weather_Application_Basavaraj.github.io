@@ -1,0 +1,220 @@
+/* Import Google Font - Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(to bottom, #2193b0, #6dd5ed);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #98E4FF;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+/* Weather Input Section */
+.weather-input {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+.city-input {
+    width: calc(100% - 40px);
+    padding: 10px 35px 10px 10px;
+    margin-bottom: 10px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.search-btn {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.search-btn i {
+    color: #007bff;
+    font-size: 18px;
+}
+
+.search-btn:hover {
+    color: #0056b3;
+}
+
+.location-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.location-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Current Weather Section */
+.current-weather {
+    margin-top: 10px;
+    margin-left: 80px;
+    margin-right: 70px;
+    padding-left: 80px;
+    border-top: 2px solid #40ff00;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F72798;
+    padding: 10px;
+}
+
+.current-weather:hover {
+    transform: translateY(-5px);
+    background-color: rgb(181, 27, 117);
+    color: white;
+}
+
+.details h2, .details p {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* CSS Modifications for Icons */
+.details p {
+    position: relative;
+    padding-left: 30px; /* Add padding to create space for the icon */
+}
+
+.details p i {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em; /* Adjust the icon size as needed */
+    color: #f4f7f9; /* Adjust the icon color */
+}
+
+.icon {
+    text-align: center;
+}
+
+.icon img {
+    width: 85px;
+    height: 85px;
+}
+
+/* Weather Cards Section */
+.weather-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+}
+
+.card {
+    width: calc(25% - 20px);
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #007bff;
+    border-radius: 10px;
+    background-color: #0fef0b;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background-color: #af04ff;
+    color: white;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+/* Hourly Forecast Section */
+.hourly-forecast {
+    margin-top: 20px;
+}
+
+.forecast-grid {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.forecast-item {
+    flex: 0 0 auto;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #007bff;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    background-color: #F97300;
+}
+
+.forecast-item:hover {
+    transform: translateY(-5px);
+    background-color: #FF204E;
+    color: white;
+}
+
+.forecast-item h3 {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.forecast-item img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid red;
+    display: none;
+    border-radius: 5px;
+    background-color: #ffcccc;
+}

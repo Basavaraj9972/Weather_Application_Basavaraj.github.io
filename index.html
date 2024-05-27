@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Welcome to Weather Application</h1>
+    
+    <div class="container">
+        <div class="weather-input">
+            <h3>Check out today's to till next five day's weather information</h3>
+            <div class="error-message">An error occurred while fetching the weather data.</div>
+            <div class="search-container">
+                <input class="city-input" type="text" placeholder="&#xF002; Enter City Name">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <button class="location-btn">Use Current Location</button>
+        </div>
+        <div class="weather-data">
+            <div class="current-weather">
+                <div class="details">
+                    <h2>City, Country</h2>
+                    <p class="description"><i class="fas fa-cloud"></i> Weather Description: __</p>
+                    <p><i class="fas fa-thermometer-half"></i> Temperature: <span class="temperature">__°C</span></p>
+                    <p><i class="fas fa-thermometer-half"></i> Feels Like: <span class="feels-like">__°C</span></p>
+                    <p><i class="fas fa-wind"></i> Wind Speed: <span class="wind-speed">__ m/s</span></p>
+                    <p><i class="fas fa-compass"></i> Wind Direction: <span class="wind-direction">__</span></p>
+                    <p><i class="fas fa-tint"></i> Humidity: <span class="humidity">__%</span></p>
+                    <p><i class="fas fa-tachometer-alt"></i> Pressure: <span class="pressure">__ hPa</span></p>
+                    <p><i class="fas fa-eye"></i> Visibility: <span class="visibility">__ km</span></p>
+                    <p><i class="fas fa-sun"></i> Sunrise: <span class="sunrise">__</span></p>
+                    <p><i class="fas fa-moon"></i> Sunset: <span class="sunset">__</span></p>
+                </div>
+                <div class="icon">
+                    <!-- Weather icon will be inserted here by JavaScript -->
+                </div>
+            </div>
+            <div class="hourly-forecast">
+                <h2>24-Hour Forecast</h2>
+                <div class="forecast-grid">
+                    <!-- 24-hour forecast data will be inserted here by JavaScript -->
+                </div>
+            </div>
+            <div class="days-forecast">
+                <h2>5-Day Forecast</h2>
+                <ul class="weather-cards">
+                    <!-- 5-day forecast data will be inserted here by JavaScript -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
