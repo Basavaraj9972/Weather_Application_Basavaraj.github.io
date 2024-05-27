@@ -23,4 +23,21 @@ To get a local copy up and running, follow these simple steps.
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/weather-dashboard.git
+   git clone https://github.com/Basavaraj9972/Weather_Application_Basavaraj.github.io.git
+
+   This command will create a local copy of the repository on your machine.
+
+2.Navigate to the project directory:
+cd weather-dashboard
+
+3.Open the index.html file in your preferred web browser.
+Usage
+Search by City:
+
+Enter a city name in the search bar and click the search icon or press Enter.
+The application will display the current weather, 24-hour forecast, and 5-day forecast for the specified city.
+Use Current Location:
+
+Click the "Use Current Location" button.
+Allow the browser to access your location.
+The application will display the weather information for your current location.
