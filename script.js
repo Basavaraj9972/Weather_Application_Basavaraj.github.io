@@ -187,4 +187,4 @@ locationButton.addEventListener("click", () => {
 });
 
 // Get weather details for a default city when the page loads
-getWeatherDetails("London");
+// getWeatherDetails("Kalaburagi");
