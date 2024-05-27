@@ -31,13 +31,13 @@ To get a local copy up and running, follow these simple steps.
 cd weather-dashboard
 
 3.Open the index.html file in your preferred web browser.
+
 Usage
-Search by City:
+1.Search by City:
+a.Enter a city name in the search bar and click the search icon or press Enter.
+b.The application will display the current weather, 24-hour forecast, and 5-day forecast for the specified city.
 
-Enter a city name in the search bar and click the search icon or press Enter.
-The application will display the current weather, 24-hour forecast, and 5-day forecast for the specified city.
-Use Current Location:
-
-Click the "Use Current Location" button.
-Allow the browser to access your location.
-The application will display the weather information for your current location.
+2.Use Current Location:
+a.Click the "Use Current Location" button.
+b.Allow the browser to access your location.
+c.The application will display the weather information for your current location.
