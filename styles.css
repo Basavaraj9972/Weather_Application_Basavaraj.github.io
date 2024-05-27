@@ -37,6 +37,7 @@ h1 {
     display: inline-block;
     width: 100%;
     max-width: 600px;
+    box-sizing: border-box;
 }
 
 .city-input {
@@ -230,13 +231,14 @@ h1 {
     }
 
     .city-input {
-        width: 100%;
+        width: calc(100% - 40px); /* Account for the space occupied by the search button */
+        padding: 10px 10px 10px 10px; /* Adjust padding to balance the input field */
     }
 
     .search-btn {
         position: absolute;
-        right: 10px;
         top: 50%;
+        right: 10px;
         transform: translateY(-50%);
     }
 
